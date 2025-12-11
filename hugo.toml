@@ -1,5 +1,4 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://swote-git.github.io'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
-theme = 
+title = 'swote-git blog'
 theme = 'simple'
