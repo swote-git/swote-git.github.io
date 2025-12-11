@@ -1,0 +1,9 @@
+[submodule "hugo-dead-simple"]
+	path = hugo-dead-simple
+	url = https://github.com/barklan/hugo-dead-simple.git
+[submodule "thems/Book"]
+	path = thems/Book
+	url = https://github.com/barklan/hugo-dead-simple.git
+[submodule "themes/simple"]
+	path = themes/simple
+	url = https://github.com/barklan/hugo-dead-simple.git
