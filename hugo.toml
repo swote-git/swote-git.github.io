@@ -2,3 +2,7 @@ baseURL = 'https://swote-git.github.io'
 languageCode = 'en-us'
 title = 'swote-git blog'
 theme = 'simple'
+
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
