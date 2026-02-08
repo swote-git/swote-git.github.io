@@ -1,8 +1,56 @@
 baseURL = 'https://swote-git.github.io'
-languageCode = 'en-us'
-title = 'swote-git blog'
-theme = 'simple'
+languageCode = 'ko-kr'
+title = 'swote-git'
+theme = 'hextra'
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    noClasses = false
 
 [caches]
   [caches.images]
     dir = ':cacheDir/images'
+
+[params]
+  description = "System Architecture & Compiler Engineering Log"
+  
+  customCSS = ["css/carbon-style.css"]
+
+  [params.search]
+    enable = true
+    
+  [params.navbar]
+    displayTitle = true
+    displayLogo = false
+    
+    [[params.navbar.items]]
+      title = "Projects"
+      url = "/projects"
+      type = "menu"
+      
+    [[params.navbar.items]]
+      title = "Devlog"
+      url = "/blog"
+      type = "menu"
+
+    [[params.navbar.items]]
+      title = "About"
+      url = "/about"
+      type = "menu"
+
+    [[params.navbar.items]]
+      name = "GitHub"
+      url = "https://github.com/swote-git"
+      icon = "github"
+
+  [params.footer]
+    displayCopyright = true
+    displayPoweredBy = false
+    copyright = "© 2026 swote-git. Built with Hugo & Hextra (Carbon Style)."
+
+  [params.blog]
+    listType = "default"
+    

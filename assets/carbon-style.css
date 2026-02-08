@@ -1,0 +1,69 @@
+/* 1. Import IBM Plex Sans (Body) & Mono (Code) Fonts */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans+KR:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Carbon Design System Color Tokens (Dark Mode Reference) */
+  --carbon-g100: #161616; /* Background: Near-black gray */
+  --carbon-g90: #262626;  /* Layer background */
+  --carbon-g80: #393939;  /* Borders */
+  --carbon-g10: #f4f4f4;  /* Primary text */
+  --carbon-blue-60: #4589ff; /* Accent color (IBM Blue) */
+  --carbon-hover: #353535;
+}
+
+/* 2. Enforce Font Families */
+body {
+  font-family: 'IBM Plex Sans KR', sans-serif !important;
+  letter-spacing: -0.01em;
+}
+
+code, kbd, samp, pre, .font-mono {
+  font-family: 'IBM Plex Mono', monospace !important;
+}
+
+/* 3. Sharp Edges: Remove all rounded corners (Core Identity) */
+* {
+  border-radius: 0px !important;
+  --radius: 0px !important;
+}
+
+/* Force sharp edges on inputs, buttons, and specific container classes */
+input, button, .rounded-md, .rounded-lg, .rounded-xl, .nx-rounded-md {
+  border-radius: 0px !important;
+}
+
+/* 4. Override Dark Mode Colors (Hextra Variables) */
+:is(html[class~="dark"]) {
+  /* Change global background to Carbon Gray 100 (#161616) */
+  --background-primary: var(--carbon-g100);
+  --background-secondary: var(--carbon-g90);
+  
+  /* Text colors */
+  --foreground-primary: var(--carbon-g10);
+  --foreground-secondary: #c6c6c6; /* Gray 30 */
+  
+  /* Border colors */
+  --border-primary: var(--carbon-g80);
+
+  /* Link and accent colors to IBM Blue 60 */
+  --primary-600: var(--carbon-blue-60);
+}
+
+/* Navigation Bar Styling (Carbon Shell feel) */
+:is(html[class~="dark"]) .hx-navbar {
+  background-color: var(--carbon-g100) !important;
+  border-bottom: 1px solid var(--carbon-g80);
+}
+
+/* Code Block Styling */
+:is(html[class~="dark"]) pre {
+  background-color: var(--carbon-g90) !important;
+  border: 1px solid var(--carbon-g80);
+}
+
+/* Sidebar Highlight Effect */
+.hx-sidebar-item--active, 
+.hx-sidebar-item:hover {
+  background-color: var(--carbon-hover) !important;
+  border-left: 2px solid var(--carbon-blue-60); /* Blue line indicator on the left */
+}
